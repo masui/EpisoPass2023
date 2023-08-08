@@ -168,19 +168,7 @@ JSONデータロード = function(){
 	    リスト表示({リスト:answers, フォームid:'answers', クラス:'answerinput', 改行あり:false});
 	    リスト表示({リスト:questions, フォームid:'questions', クラス:'questioninput', 改行あり:true});
 	    
-
-	    /*
-	    // よくわからないが <input> を作りなおさないと再ロードができない
-	    $('#fileload').remove()
-	    $('<input>')
-		.attr('type','file')
-		.attr('id','fileload')
-		.css('display','none')
-		.attr('accept','text/json')
-		.on('click',JSONデータロード)
-		.appendTo($('#saveload'))
-	    */
-	    // 作りなおさなくても以下で大丈夫
+	    // データの再ロードを可能にする
 	    // https://qiita.com/_Keitaro_/items/57b1c5dd36b7bed08ad8
 	    $('#fileload').val('')
         };
@@ -215,7 +203,6 @@ EpisoPassデータ作成 = function(){
     for(var i=0;i<最大問題数;i++){
 	var o = {}
 	o["question"] = リスト[i]
-	//o["answers"] = db.回答リスト
 	o["answers"] = answers
 	qas.push(o)
     }
