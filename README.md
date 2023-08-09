@@ -6,7 +6,13 @@
   <li><code>make</code>すると全部入りの<code>index.html</code>が作成される
   <li>GitHub Pagesで運用</li>
   <li>Cypressによるテストができる</li>
-  <li>問題データベースを引数に指定できるようにした</li>
+  <li>問題データベースと回答数を引数に指定できるようにした</li>
 </ul>
 
+<h3>TODO</h3>
+
+<ul>
+  <li>現在の状態をメニューに表示</li>
+  <li>pushstate利用して「戻る」を有効に</li>
+</ul>
 
