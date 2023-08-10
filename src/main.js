@@ -63,7 +63,13 @@ main = async function(){
     }
 
     // ボタンの挙動設定
-    $("#descbutton").click(() => lib.lib.show('#description'))
+    $("#descbutton").click(() => {
+	lib.lib.show('#description')
+	$('#descbuttondiv').css('background','#999')
+	$('#episodbbuttondiv').css('background','#555')
+	$('#editbuttondiv').css('background','#555')
+	$('#dasbuttondiv').css('background','#555')
+    })
     $("#episodbbutton").click(() => episodb.episodb())
     $("#editbutton").click(() => editor.editor())
     $("#dasbutton").off() // 何度も登録されて困った
@@ -90,6 +96,10 @@ main = async function(){
     }
     else {
 	lib.lib.show('#description')
+	$('#descbuttondiv').css('background','#999')
+	$('#episodbbuttondiv').css('background','#555')
+	$('#editbuttondiv').css('background','#555')
+	$('#dasbuttondiv').css('background','#555')
     }
 }
 

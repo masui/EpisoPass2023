@@ -1,6 +1,12 @@
 episodb = function(){
     function init(){
 	lib.lib.show('#episodb')
+
+	$('#descbuttondiv').css('background','#555')
+	$('#episodbbuttondiv').css('background','#999')
+	$('#editbuttondiv').css('background','#555')
+	$('#dasbuttondiv').css('background','#555')
+
 	リスト表示({リスト:answers, フォームid:'answers', クラス:'answerinput', 改行あり:false})
 	リスト表示({リスト:questions, フォームid:'questions', クラス:'questioninput', 改行あり:true})
     }

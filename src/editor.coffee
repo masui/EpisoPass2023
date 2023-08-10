@@ -13,6 +13,11 @@ editor = () =>
   #console.log "data-----"
   #console.log data
 
+  $('#descbuttondiv').css('background','#555')
+  $('#episodbbuttondiv').css('background','#555')
+  $('#editbuttondiv').css('background','#999')
+  $('#dasbuttondiv').css('background','#555')
+
   globaldata = data # グローバル変数「data」にアクセスするための苦しい工夫
   name = data.name
   qas = data.qas
