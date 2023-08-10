@@ -17,8 +17,8 @@
       <div style="padding:10px;background-color:#ffffff;">
 	<div class='topmenu'>
 	  <span id="descbutton"><div id='descbuttondiv' class='topmenuitem'>EpisoPass概要</div></span>
-	  <span id="episodbbutton"><div id='episodbbuttondiv' class='topmenuitem'>問題データベース編集</div></span>
-	  <span id="editbutton"><div id='editbuttondiv' class='topmenuitem'>回答選択</div></span>
+	  <span id="episodbbutton"><div id='episodbbuttondiv' class='topmenuitem'>問題プール編集</div></span>
+	  <span id="editbutton"><div id='editbuttondiv' class='topmenuitem'>問題選択/回答入力</div></span>
 	  <span id="dasbutton"><div id='dasbuttondiv' class='topmenuitem'>EpisoPassページ作成</div></span>
 	</div>
 	<hr>
@@ -48,21 +48,21 @@
 	  <li>
 	    DASとは「<a href="https://en.wikipedia.org/wiki/Draw_a_Secret">Draw-a-Secret</a>」の略で、
 	    自分だけが知っている秘密のパタンのことです。
-	    描きやすいDASパタンを登録するとEpisoPassページでの回答選択が楽になります。
+	    描きやすいDASパタンを登録するとEpisoPassページでの回答入力が楽になります。
 	  </li>
 	  <li>EpisoPassのアルゴリズムや関連システムなどの詳細は<a href="https://Scrapbox.io/EpisoPass">Scrapbox上の解説</a>をご覧ください。</li>
 	</ul>
 	
 	<h3>問題を簡単に作成する</h3>
 	<ul>
-	  <li><a href='#' onclick="episodb.episodb()"><b>問題データベース編集</b></a>メニューを選択すると、EpisoPass問題を作成するための問題データベースを作成できます。</li>
-	  <li>問題データベース編集ページで回答リストと問題リストを作成しておくと、
-	    問題データベースからランダムに選択された問題データを
-	    <a href='#' onclick="editor.editor()"><b>問題編集</b></a>で利用できます。
+	  <li><a href='#' onclick="episodb.episodb()"><b>問題プール編集</b></a>メニューを選択すると、EpisoPass問題を作成するための問題プールを作成できます。</li>
+	  <li>問題プール編集ページで回答リストと問題リストを作成しておくと、
+	    問題プールからランダムに選択された問題データを
+	    <a href='#' onclick="editor.editor()"><b>問題回答</b></a>で利用できます。
 	  </li>
-	  <li>問題データベースはブラウザのLocalStorageに保存されます。</li>
-	  <li>問題データベースデータはJSON型式のローカルファイルとしてセーブ/ロードすることもできます。</li>
-	  <li><a href="https://s3-ap-northeast-1.amazonaws.com/masui.org/1/f/1feba39d1db3047b9fd0771852c22e41.json">問題データベースデータの例</a></li>
+	  <li>問題プールはブラウザのLocalStorageに保存されます。</li>
+	  <li>問題プールデータはJSON型式のローカルファイルとしてセーブ/ロードすることもできます。</li>
+	  <li><a href="https://s3-ap-northeast-1.amazonaws.com/masui.org/1/f/1feba39d1db3047b9fd0771852c22e41.json">問題プールデータの例</a></li>
 	</ul>
 	
 	<h3>問題の再編集</h3>
@@ -77,7 +77,7 @@
 	<ul>
 	  <li>
 	    EpisoPassはWeb上のサーバやデータベースを利用しません。
-	    EpisoPassページ作成時や問題データベース作成時にネット通信は行なわれません。
+	    EpisoPassページ作成時や問題プール作成時にネット通信は行なわれません。
 	  </li>
 	  <li>
 	    EpisoPassは<a href="https://EpisoPass.com/index.html">https://EpisoPass.com/index.html</a>という単一HTMLファイルで動作するので、
@@ -114,7 +114,7 @@
       </div>
       
       <div id="editor" style="display:none;"> <!-- 編集画面 -->
-	<h2>回答選択<h2>
+	<h2>回答入力<h2>
 
 	<div style="font-size:18; width=600px;">
 	  <b>Seed</b>: <input type="text" id="seed" class="seedpass" width=100>
@@ -136,12 +136,12 @@
       </div>
       
       <div id="episodb" style="display:none;"> <!-- 簡単登録画面 -->
-	<h2>問題データベース編集</h2>
+	<h2>問題プール編集</h2>
 
 	<ul>
-	  <li>問題データベースを作っておくと簡単にEpisoPass問題を作れます。</li>
-	  <li>問題データベースの編集/保存はローカルに実行されます。</li>
-	  <li>問題データベースはブラウザ(LocalStorage)に保存されるので前回作成したものを再利用できます。</li>
+	  <li>問題プールを作っておくと簡単にEpisoPass問題を作れます。</li>
+	  <li>問題プールの編集/保存はローカルに実行されます。</li>
+	  <li>問題プールはブラウザ(LocalStorage)に保存されるので前回作成したものを再利用できます。</li>
 	</ul>
 
 	<blockquote>
@@ -150,7 +150,7 @@
 	    ここで作成した問題と回答のリストをJSON型式でローカルファイルにセーブします
 	    <br/>
             <input type="button" value="データロード" onclick="$('#fileload').click()"  style="margin:3px;"/>
-	    問題データベースのJSONデータをローカルファイルから読み込みます
+	    問題プールのJSONデータをローカルファイルから読み込みます
             <input type="file" id="fileload" style="display:none;" accept="text/json" onclick="episodb.JSONデータロード()">
 	  </form>
 	</blockquote>
