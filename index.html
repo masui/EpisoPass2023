@@ -358,7 +358,13 @@ input.button {
       </div>
       
       <div id="editor" style="display:none;"> <!-- 編集画面 -->
-	<h2>回答入力<h2>
+	<h2>回答入力</h2>
+
+	<div>
+	  回答を入力してから
+	  <input type="button" value="EpisoPassページ生成" onclick="dasmaker.dasmaker(data,editor.answer())">ボタンを押してEpisoPassページを生成できます。
+	</div>
+	<p></p>
 
 	<div style="font-size:18; width=600px;">
 	  <b>Seed</b>: <input type="text" id="seed" class="seedpass" width=100>
