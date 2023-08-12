@@ -24,8 +24,10 @@
 	</div>
 	<hr>
       </div>
-      <img src="data:image/png;base64,<%= Base64.encode64(File.read('src/episopass.png')).gsub("\n",'') %>"
-	   height=40 style="position: fixed; top: 10px; left: 10px; right: 0; z-index: 990; overflow: unset;">
+      <a href="index.html">
+	<img src="data:image/png;base64,<%= Base64.encode64(File.read('src/episopass.png')).gsub("\n",'') %>"
+	     height=40 style="position: fixed; top: 10px; left: 10px; right: 0; z-index: 990; overflow: unset;">
+      </a>
     </div>
 
     <div id="contents" style="width:95%;margin:auto;max-width:800px">
@@ -206,10 +208,10 @@
 
 	<blockquote>
 	  <form id="saveload">
-	    <input type="button" value="問題プールデータセーブ" onclick="episodb.JSONデータセーブ()" style="margin:3px;" />
+	    <input type="button" value="問題プールをセーブ" onclick="episodb.JSONデータセーブ()" style="margin:3px;" />
 	    ここで編集した問題と回答のリストをローカルファイルにセーブします
 	    <br/>
-            <input type="button" value="問題プールデータロード" onclick="$('#fileload').click()"  style="margin:3px;"/>
+            <input type="button" value="問題プールをロード" onclick="$('#fileload').click()"  style="margin:3px;"/>
 	    問題プールのデータをローカルファイルから読み込みます
             <input type="file" id="fileload" style="display:none;" accept="text/json" onclick="episodb.JSONデータロード()">
 	  </form>
