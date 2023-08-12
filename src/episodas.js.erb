@@ -332,7 +332,7 @@ episodas = function(data){
 	center.append($('<p>'));
 
 	// 回答領域
-	answers = qas[0].answers; // 回答の数は同じということを仮定
+	var answers = qas[0].answers; // 回答の数は同じということを仮定
 
 	for(var i=0;i<answers.length;i++){
             var div = $('<div>');

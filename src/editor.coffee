@@ -10,8 +10,8 @@
 answer = [0,0,0,0,0,0,0,0,0,0]
 
 editor = () =>
-  #console.log "data-----"
-  #console.log data
+  console.log "data-----"
+  console.log data
 
   $('#descbuttondiv').css('background','#555')
   $('#episodbbuttondiv').css('background','#555')
