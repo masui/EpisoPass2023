@@ -104,15 +104,13 @@
 	  <li>EpisoPassのアルゴリズムや関連システムなどの詳細は<a href="https://Scrapbox.io/EpisoPass">Scrapbox上の解説</a>をご覧ください。</li>
 	</ul>
 
-	<!--
-	<h3>問題の再編集</h3>
+	<h3>再編集</h3>
 	<ul>
 	  <li>
-	    EpisoPassページのHTMLを問題編集画面にDrag&amp;Dropすると
+	    生成されたEpisoPassページのHTMLを編集画面にDrag&amp;Dropすると
 	    EpisoPassページを再編集できます。
 	  </li>
 	</ul>
-	-->
 
 	<h3>注意</h3>
 	<ul>
@@ -212,10 +210,10 @@
 
 	<blockquote>
 	  <form id="saveload">
-	    <input type="button" value="データセーブ" onclick="episodb.JSONデータセーブ()" style="margin:3px;" />
+	    <input type="button" value="問題プールデータセーブ" onclick="episodb.JSONデータセーブ()" style="margin:3px;" />
 	    ここで編集した問題と回答のリストをJSON型式でローカルファイルにセーブします
 	    <br/>
-            <input type="button" value="データロード" onclick="$('#fileload').click()"  style="margin:3px;"/>
+            <input type="button" value="問題プールデータロード" onclick="$('#fileload').click()"  style="margin:3px;"/>
 	    問題プールのJSONデータをローカルファイルから読み込みます
             <input type="file" id="fileload" style="display:none;" accept="text/json" onclick="episodb.JSONデータロード()">
 	  </form>
@@ -224,7 +222,8 @@
 	<h3>回答リスト</h3>
 	  
 	<ul>
-	  <li>馴染みのある地名などを30個以上リストしてください。</li>
+	  <li>馴染みのある地名や人名をリストしてください。</li>
+	  <li>30個以上リストしてください。</li>
 	</ul>
 	
 	<blockquote>
@@ -243,7 +242,8 @@
 	<h3>問題リスト</h3>
     
 	<ul>
-	  <li>上のリストの項目のひとつを特定できる<b>秘密の問題</b>を10個以上用意してください</li>
+	  <li>上のリストの項目のひとつを特定できる<b>秘密の問題</b>を記述して下さい。</li>
+	  <li>安全のため、問題は10個以上用意してください。</li>
 	  <li>他人が知らない<b>事実</b>で、将来忘れないようなエピソードを書いて下さい。</li>
 	</ul>
     
