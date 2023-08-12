@@ -18,8 +18,8 @@
 	<div class='topmenu'>
 	  <span id="descbutton"><div id='descbuttondiv' class='topmenuitem'>EpisoPass概要</div></span>
 	  <span id="episodbbutton"><div id='episodbbuttondiv' class='topmenuitem'>問題プール編集</div></span>
-	  <span id="editbutton"><div id='editbuttondiv' class='topmenuitem'>EpisoPassページ作成</div></span>
-	  <span id="dasbutton" style="display:none;"><div id='dasbuttondiv' class='topmenuitem'>HTML生成</div></span>
+	  <span id="editbutton"><div id='editbuttondiv' class='topmenuitem'>EpisoPassデータ作成</div></span>
+	  <span id="dasbutton" style="display:none;"><div id='dasbuttondiv' class='topmenuitem'>EpisoPassページ生成</div></span>
 	  <!--
 	  <span id="editbutton"><div id='editbuttondiv' class='topmenuitem'>問題選択/回答入力</div></span>
 	  <span id="dasbutton"><div id='dasbuttondiv' class='topmenuitem'>EpisoPassページ作成</div></span>
@@ -85,15 +85,12 @@
 	    <a href='#' onclick="editor.editor()"><b>問題選択/回答入力</b></a>を選択すると、
 	    問題プールからランダムに問題が選択され、正答を選択してパスワード生成可能になります。
 	    -->
-	    <a href='#' onclick="editor.editor()"><b>EpisoPassページ作成</b></a>を選択すると、
+	    <a href='#' onclick="editor.editor()"><b>EpisoPassデータ作成</b></a>を選択すると、
 	    問題プールからランダムに問題が選択され、正答を選択してパスワード生成可能になります。
 	  </li>
 	  <li>
 	    正答を選択した後で
-	    <!--
 	    <a href='#' onclick="dasmaker.dasmaker(data,editor.answer())"><b>EpisoPassページ作成</b></a>
-	    -->
-	    <a href='#' onclick="dasmaker.dasmaker(data,editor.answer())"><b>HTML生成</b></a>
 	    ページに移動し、<b>DAS</b>パタンを指定してから「ダウンロード」をクリックすると、
 	    パスワードを生成するための<b>EpisoPassページ</b>のHTMLファイルを取得できます。
 	  </li>
