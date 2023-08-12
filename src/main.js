@@ -100,6 +100,7 @@ main = async function(){
 	$('#episodbbuttondiv').css('background','#555')
 	$('#editbuttondiv').css('background','#555')
 	$('#dasbuttondiv').css('background','#555')
+	$('#dasbutton').css('display','none')
     }
 }
 

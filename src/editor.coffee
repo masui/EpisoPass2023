@@ -17,6 +17,8 @@ editor = () =>
   $('#episodbbuttondiv').css('background','#555')
   $('#editbuttondiv').css('background','#999')
   $('#dasbuttondiv').css('background','#555')
+  $('#dasbutton').css('display','block')
+  console.log "show dasbutton"
 
   globaldata = data # グローバル変数「data」にアクセスするための苦しい工夫
   name = data.name
