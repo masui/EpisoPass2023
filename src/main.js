@@ -77,6 +77,72 @@ main = async function(){
     $("#dasbutton").click(() => dasmaker.dasmaker(data,editor.answer()))
     
     episodb.EpisoPassデータ作成()
+
+    answer = [0,0,0,0,0,0,0,0,0,0]
+    function calcpass(copy){
+	newpass = crypt.crypt($('#seed').val(), secretstr())
+	$('#pass').val(newpass)
+    }
+    function secretstr(){
+	var a = []
+	for(var i=0;i<qas.length;i++){
+	    a.push(qas[i]['question'] + qas[i]['answers'][answer[i]])
+	}
+	return a.join('')
+    }
+    
+    $('body')
+	.bind("dragover", (e) =>
+            false
+	).bind("dragend", (e) =>
+            false
+	).bind("drop", (e) => {
+            e.preventDefault() // デフォルトは「ファイルを開く」
+            files = e.originalEvent.dataTransfer.files
+
+            //sendfile files
+	    file = files[0]
+	    fileReader = new FileReader()
+	    fileReader.onload = (event) => {
+		// ここで「data」がどうしてもローカルになってしまうので
+		// 「globaldata」というのを使う (苦しい!)
+		s = event.target.result // 読んだファイルの内容
+		if(s[0] == "{"){
+		    data = JSON.parse(s)
+		}
+		else {
+		    lines = s.split(/\n/)
+		    lines.forEach((line) => {
+			m = line.match(/^\s*const data = (.*)$/)
+			if(m){
+			    json = m[1].replace(/;.*$/,'')
+			    data = JSON.parse(json)
+			}
+		    })
+		}
+		qas = data['qas']
+		seed = data['seed']
+		//globaldata['qas'] = data['qas']
+		//globaldata['seed'] = data['seed']
+
+		questions = []
+		for(var i=0; i<qas.length; i++){
+		    questions.push(qas[i]['question'])
+		}
+		    
+		//[0...qas.length].forEach((i) => {
+		//    questions.push(qas[i]['question'])
+		//})
+		answers = qas[0]['answers']
+      
+		$('#seed').val(seed)
+		//$("#main").children().remove()
+		//maindiv()
+		calcpass()
+	    }
+	    fileReader.readAsText(file)
+            files
+	})
     
     let qas = []
     let maxlen = questions.length
