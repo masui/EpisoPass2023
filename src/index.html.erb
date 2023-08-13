@@ -73,8 +73,13 @@
 	  <li>問題プールはブラウザのLocalStorageにも保存されます。</li>
 	  <li>
 	    <a href='#' onclick="editor.editor()"><b>EpisoPassページ作成</b></a>を選択すると、
-	    問題プールからランダムに問題が選択され、正答を選択してパスワード生成可能になります。
+	    問題プールからランダムに問題が10個選択され、正答を選択してパスワード生成可能になります。
 	  </li>
+	  <ul>
+	    <li>
+	      問題数はURL引数で指定できます (e.g. <code>?n=5</code>)
+	    </li>
+	  </ul>
 	  <li>
 	    正答を選択した後で <b>HTML生成</b> ボタンを押し、
 	    <b>DAS</b>パタンを指定してから「EpisoPassページダウンロード」ボタンをクリックすると、
@@ -89,9 +94,6 @@
 	      描きやすいDASパタンを登録するとEpisoPassページでの回答入力が楽になります。
 	    </li>
 	  </ul>
-	  <li>
-	    EpisoPassページの問題数はURL引数で指定できます (<code>?n=5</code>)
-	  </li>
 	  <li>
 	    EpisoPassのアルゴリズムや関連システムなどの詳細は<a href="https://Scrapbox.io/EpisoPass">Scrapbox上の解説</a>をご覧ください。
 	  </li>
