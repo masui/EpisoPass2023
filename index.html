@@ -249,15 +249,15 @@ input.button {
 	  </li>
 	  <li>
 	    問題プールは、秘密の質問と回答候補を並べたものです。
-		<a href="https://gist.githubusercontent.com/masui/12e3c589f5eb91558fc4843f1c0a20e4/raw/4573261cbc32ca6badda7eb9c2e93e2a56ad1161/kenmei.json">例1</a> /
-		<a href="https://gist.githubusercontent.com/masui/a035539ad0ddebad9036fe903ec3f4e8/raw/10a8b298fcca3cd8ac6810d171257ea7406493bf/kaigai.json">例2</a> /
-		<a href="https://gist.githubusercontent.com/masui/53c63b8deeca5b1d072ea4812cbb57f3/raw/80e1537013665f237a9df5dd65e9e4242e14d7ab/episopass.json">例3</a>
+		<a href="https://gist.githubusercontent.com/masui/12e3c589f5eb91558fc4843f1c0a20e4/raw/4573261cbc32ca6badda7eb9c2e93e2a56ad1161/kenmei.json">県名</a> /
+		<a href="https://gist.githubusercontent.com/masui/a035539ad0ddebad9036fe903ec3f4e8/raw/10a8b298fcca3cd8ac6810d171257ea7406493bf/kaigai.json">海外地名</a> /
+		<a href="https://gist.githubusercontent.com/masui/53c63b8deeca5b1d072ea4812cbb57f3/raw/80e1537013665f237a9df5dd65e9e4242e14d7ab/episopass.json">人名</a>
 	  </li>
 	  <li>
 	    Webに置いた問題プールデータをURL引数に指定できます。
-	    <a href="?data=https://gist.githubusercontent.com/masui/12e3c589f5eb91558fc4843f1c0a20e4/raw/4573261cbc32ca6badda7eb9c2e93e2a56ad1161/kenmei.json">例1</a> /
-	    <a href="?data=https://gist.githubusercontent.com/masui/a035539ad0ddebad9036fe903ec3f4e8/raw/10a8b298fcca3cd8ac6810d171257ea7406493bf/kaigai.json">例2</a> /
-	    <a href="?data=https://gist.githubusercontent.com/masui/53c63b8deeca5b1d072ea4812cbb57f3/raw/80e1537013665f237a9df5dd65e9e4242e14d7ab/episopass.json">例3</a>
+	    <a href="?data=https://gist.githubusercontent.com/masui/12e3c589f5eb91558fc4843f1c0a20e4/raw/4573261cbc32ca6badda7eb9c2e93e2a56ad1161/kenmei.json">県名</a> /
+	    <a href="?data=https://gist.githubusercontent.com/masui/a035539ad0ddebad9036fe903ec3f4e8/raw/10a8b298fcca3cd8ac6810d171257ea7406493bf/kaigai.json">海外地名</a> /
+	    <a href="?data=https://gist.githubusercontent.com/masui/53c63b8deeca5b1d072ea4812cbb57f3/raw/80e1537013665f237a9df5dd65e9e4242e14d7ab/episopass.json">人名</a>
 	  </li>
 	  <li>
 	    <a href='#' onclick="episodb.episodb()"><b>問題プール編集</b></a>メニューを選択すると
@@ -268,9 +268,11 @@ input.button {
 	    <a href='#' onclick="editor.editor()"><b>EpisoPassページ作成</b></a>を選択すると、
 	    問題プールからランダムに問題が10個選択され、正答を選択してパスワード生成可能になります。
 	  </li>
-	  <li>
-	    問題数はURL引数で指定できます (e.g. <code>?n=5</code>)
-	  </li>
+	  <ul>
+	    <li>
+	      問題数はURL引数で指定できます (e.g. <code>?n=5</code>)
+	    </li>
+	  </ul>
 	  <li>
 	    正答を選択した後で <b>HTML生成</b> ボタンを押し、
 	    <b>DAS</b>パタンを指定してから「EpisoPassページダウンロード」ボタンをクリックすると、
