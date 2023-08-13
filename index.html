@@ -416,9 +416,11 @@ input.button {
 	
 	<blockquote>
 	  <form>
+	    <!--
 	    <input type="button" class="button" value="ランダムに県名を追加" onclick="episodb.ランダムに回答を追加(db.県名リスト)">
 	    <input type="button" class="button" value="ランダムに都市名を追加" onclick="episodb.重みづけランダムに都市を追加()">
 	    <input type="button" class="button" value="ランダムに町名を追加" onclick="episodb.ランダムに回答を追加(db.町名リスト)">
+	    -->
 	    <input type="button" class="button" value="シャッフル" onclick="episodb.データシャッフル(answers); episodb.リスト表示({リスト:answers, フォームid:'answers', クラス:'answerinput', 改行あり:false});" >
 	  </form>
       
@@ -436,7 +438,9 @@ input.button {
     
 	<blockquote>
 	  <form>
+	    <!--
 	    <input type="button" class="button" value="ランダムに問題を追加" onclick="episodb.ランダムに問題を追加()">
+	    -->
 	    <input type="button" class="button" value="シャッフル"
 		   onclick="episodb.データシャッフル(questions); episodb.リスト表示({リスト:questions, フォームid:'questions', クラス:'questioninput', 改行あり:true});" >
 	  </form>
