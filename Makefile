@@ -19,7 +19,7 @@ compile:
 	coffee -b -c src/editor.coffee
 	chmod 444 src/editor.js
 	-/bin/rm -f src/crypt.js
-	coffee -b -c src/crypt.coffee
+	coffee -c src/crypt.coffee
 	chmod 444 src/crypt.js
 
 index:
