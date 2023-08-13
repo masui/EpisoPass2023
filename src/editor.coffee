@@ -221,7 +221,7 @@ editor = () =>
       calcseed()
 
     $('#seed').val data.seed
-      
+
     # Drag&Drop対応
     $('body')
       .bind "dragover", (e) ->
