@@ -1,0 +1,18 @@
+{
+  "name": "EpisoPass_masui@pitecan.com",
+  "seed": "EpisoPass_123456",
+  "qas": [
+      {
+	  "question": "公園でコケたのは?",
+	  "answers": [
+	      "東京", "大阪", "鎌倉", "大宮", "本郷", "上村"
+	  ]
+      },
+      {
+	  "question": "財布を拾ったのは?",
+	  "answers": [
+	      "東京", "大阪", "鎌倉", "大宮", "本郷", "上村"
+	  ]
+      }
+  ]
+}
