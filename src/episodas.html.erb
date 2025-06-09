@@ -28,11 +28,11 @@
       const data = <%= data.to_json %>; // REPLACE_THIS_LINE
 
       // seed引数を得る
-      var seed = 'abcdefg'
+      //var seed = 'abcdefg'
       var searchParams = new URLSearchParams(location.search);
       var newseed = searchParams.get('seed')
       if(newseed) seed = newseed
-      data.seed = seed
+      //data.seed = seed
 
       var exports = {};
     </script>
